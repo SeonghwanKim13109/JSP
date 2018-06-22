@@ -1,6 +1,9 @@
 package com.javalec.jsp;
 
 import java.io.IOException;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -57,5 +60,13 @@ public class LifeCycleEx extends HttpServlet {
 		// TODO Auto-generated method stub
 		System.out.println("do post");
 	}
-
+	@PostConstruct
+	private void initPostConstruct() {
+		System.out.println("initPostConstruct");
+	}
+	
+	@PreDestroy
+	private void destroyPreDestroy(){
+		System.out.println("destroyPreDestroy");
+	}
 }
