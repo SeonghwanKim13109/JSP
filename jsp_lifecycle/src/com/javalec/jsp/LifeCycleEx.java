@@ -14,7 +14,19 @@ import javax.servlet.http.HttpServletResponse;
 public class LifeCycleEx extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
+    @Override
+	protected void service(HttpServletRequest arg0, HttpServletResponse arg1) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		System.out.println("doService");
+	}
+
+	@Override
+	public void init() throws ServletException {
+		// TODO Auto-generated method stub
+		System.out.println("init");
+	}
+
+	/**
      * @see HttpServlet#HttpServlet()
      */
     public LifeCycleEx() {
@@ -27,14 +39,15 @@ public class LifeCycleEx extends HttpServlet {
 	 */
 	public void destroy() {
 		// TODO Auto-generated method stub
+		System.out.println("destroy");
 	}
-
+		
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		System.out.println("do get");
 	}
 
 	/**
@@ -42,7 +55,7 @@ public class LifeCycleEx extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		System.out.println("do post");
 	}
 
 }
