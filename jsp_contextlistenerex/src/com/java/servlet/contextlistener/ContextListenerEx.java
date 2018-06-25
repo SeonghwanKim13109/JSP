@@ -14,7 +14,7 @@ public class ContextListenerEx implements ServletContextListener {
 	@Override
 	public void contextInitialized(ServletContextEvent arg0) {
 		// TODO Auto-generated method stub
-		System.out.println();
+		System.out.println("context linitiated");
 	}
 
 }
