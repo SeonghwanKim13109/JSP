@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class ServletInitParam
  */
-@WebServlet("/ServletInitParam")
+//@WebServlet("/ServletInitParam")
 public class ServletInitParam extends HttpServlet implements Servlet {
 	private static final long serialVersionUID = 1L;
        
