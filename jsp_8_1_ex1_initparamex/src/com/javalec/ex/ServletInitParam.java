@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class ServletInintParam
  */
-@WebServlet("/ServletInintParam")
-public class ServletInintParam extends HttpServlet {
+//@WebServlet("/ServletInintParam")
+public class ServletInitParam extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ServletInintParam() {
+    public ServletInitParam() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -53,7 +53,7 @@ public class ServletInintParam extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		//doGet(request, response);
 	}
 
 }
