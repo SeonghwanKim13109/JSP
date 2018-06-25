@@ -1,6 +1,8 @@
 package com.java.servlet.context;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +29,21 @@ public class ContextInitParam extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		String id = getServletContext().getInitParameter("id");
+		String pw = getServletContext().getInitParameter("pw");
+		String path = getServletContext().getInitParameter("path");
+		
+		response.setContentType("text/html; charset=EUC-KR");
+		
+		PrintWriter writer = response.getWriter();
+		writer.println("<html><head></head><body>");
+		writer.println("id : "+ id +"<br/>");
+		writer.println("pw : "+ pw +"<br/>");
+		writer.println("path : "+ path );
+		writer.println("</body></html>");
+		
+		writer.close();
 	}
 
 	/**
@@ -35,7 +51,7 @@ public class ContextInitParam extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		
 	}
 
 }
