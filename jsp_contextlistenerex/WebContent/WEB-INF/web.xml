@@ -11,6 +11,6 @@
   </welcome-file-list>
   
   <listener>
-  	<listener-class>com.java.sevlet.contextlistener.ContextListenerEx</listener-class>
+  	<listener-class>com.java.servlet.contextlistener.ContextListenerEx</listener-class>
   </listener>
 </web-app>
