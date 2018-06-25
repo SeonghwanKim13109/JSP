@@ -34,15 +34,12 @@ System.out.println("doGet");
 		
 		String id = getInitParameter("id");
 		String pw = getInitParameter("pw");
-		String path = getInitParameter("path");
-		
 		response.setContentType("text/html; charset=EUC-KR");
 		
 		PrintWriter writer = response.getWriter();
 		writer.println("<html><head></head><body>");
 		writer.println("id : "+ id +"<br/>");
 		writer.println("pw : "+ pw +"<br/>");
-		writer.println("path : "+ path );
 		writer.println("</body></html>");
 		
 		writer.close();
