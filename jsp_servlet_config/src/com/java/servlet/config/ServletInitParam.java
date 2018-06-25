@@ -1,4 +1,4 @@
-package com.java.sevlet.config;
+package com.java.servlet.config;
 
 import java.io.IOException;
 import javax.servlet.Servlet;
