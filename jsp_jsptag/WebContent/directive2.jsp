@@ -9,6 +9,8 @@
 <body>
 	<h1> directive2.jps page입니다</h1>
 	<%@ include file = "directive.jsp" %>
+	<br/>
+	<%@ include file = "declaration.jsp" %>
 	<h1> 다시 direcitve2.jsp page 입니다</h1>
 </body>
 </html>
