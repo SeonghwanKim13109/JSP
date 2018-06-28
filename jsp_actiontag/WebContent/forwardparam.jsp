@@ -8,8 +8,8 @@
 </head>
 <body>
 	<jsp:forward page="parameter.jsp">
-		<jsp:param value="id" name="abcd"/>
-		<jsp:param value="pw" name="12345"/>
+		<jsp:param value="abcd" name="id"/>
+		<jsp:param value="1234" name="pw"/>
 	</jsp:forward>
 </body>
 </html>
