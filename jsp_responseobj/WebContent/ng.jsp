@@ -14,6 +14,7 @@
 	age = Integer.parseInt(str);
 	%>
 	
+	<%= age %>세 입니다<br/>
 	미성년자 입니다. 구매가 불가능 합니다.
 	
 <a href="requestex.html">처음으로 이동</a>

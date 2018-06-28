@@ -14,6 +14,7 @@
 	age = Integer.parseInt(str);
 	%>
 	
+	<%= age %>세 입니다<br/>
 	성인입니다. 구매가 가능 합니다.
 <a href="requestex.html">처음으로 이동</a>
 </body>
