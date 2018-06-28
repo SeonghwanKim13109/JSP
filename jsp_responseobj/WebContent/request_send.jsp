@@ -18,7 +18,7 @@
 		response.sendRedirect("pass.jsp?age=" +age);
 	}
 	else{
-		response.sendRedirect("ng.jsp?age"+age);
+		response.sendRedirect("ng.jsp?age="+age);
 	}
 	%>
 	
