@@ -10,7 +10,9 @@
 
 	<%
 		Cookie cookie = new Cookie("cookieN","CookieV");
+	// Cookie(cookie name , cookie value)
 		cookie.setMaxAge(60*60);
+	//유효기간은 second
 		response.addCookie(cookie);
 	%>
 	<a href="cookieget.jsp">cookieget</a>
