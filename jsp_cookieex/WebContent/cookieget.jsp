@@ -20,6 +20,6 @@
 	}
 	%>
 	
-	<a href = "cookiedle.jsp">cookie delete</a>
+	<a href = "cookiedel.jsp">cookie delete</a>
 </body>
 </html>
