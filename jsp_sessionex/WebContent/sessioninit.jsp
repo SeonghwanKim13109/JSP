@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	
+	<%
+	session.setAttribute("mySeesionName","mySessionData");
+	session.setAttribute("myNum",12345);
+	%>
+	
+	<a href="sessionget.jsp">session get</a>
 </body>
 </html>
