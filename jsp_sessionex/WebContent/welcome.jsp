@@ -16,12 +16,12 @@
 		String sValue = session.getAttribute(sName).toString();
 		
 		if(sName.equals("abcd")&&sValue.equals("1234")){
-		session.invalidate();
+		out.println(sName +"¥‘ æ»≥Á«œººø‰ <br/>");
 		}
 		
 	}
 	%>
 	
-	<a href="sessiontest.jsp">session test</a>
+	<a href="logout.jsp">log out</a>
 </body>
 </html>
