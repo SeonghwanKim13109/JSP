@@ -8,5 +8,12 @@
 </head>
 <body>
 
+	<%
+		Cookie cookie = new Cookie("cookieN","CookieV");
+		cookie.setMaxAge(60*60);
+		response.addCookie(cookie);
+	%>
+	<a href="cookieget.jsp">cookieget</a>
+
 </body>
 </html>
