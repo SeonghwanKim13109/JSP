@@ -16,7 +16,7 @@
 		String sName = enumeration.nextElement().toString();
 		String sValue = session.getAttribute(sName).toString();
 		
-		if(sName.equals("abcd")&&sValue.equals("1234")){
+		if(sValue.equals("abcd")){
 		session.removeAttribute(sName);
 		}
 		
