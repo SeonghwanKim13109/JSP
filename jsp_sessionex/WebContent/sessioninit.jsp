@@ -9,7 +9,7 @@
 <body>
 	
 	<%
-	session.setAttribute("mySeesionName","mySessionData");
+	session.setAttribute("mySessionName","mySessionData");
 	session.setAttribute("myNum",12345);
 	%>
 	
