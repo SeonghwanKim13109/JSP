@@ -9,7 +9,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	Error 500br/>
-
+	Error 500<br/>
 </body>
 </html>
