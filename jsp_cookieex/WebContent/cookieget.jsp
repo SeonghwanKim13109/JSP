@@ -19,5 +19,7 @@
 		}
 	}
 	%>
+	
+	<a href = "cookiedle.jsp">cookie delete</a>
 </body>
 </html>
