@@ -17,7 +17,7 @@
 		
 		System.out.println(sName);
 		
-		if(sName.equals("abcd")){
+		if(sValue.equals("abcd")){
 		out.println(sName +"¥‘ æ»≥Á«œººø‰"+ "<br/>");
 		}
 		

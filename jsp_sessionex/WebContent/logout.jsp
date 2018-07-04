@@ -9,6 +9,7 @@
 </head>
 <body>
 
+
 	<%
 	Enumeration enumeration = session.getAttributeNames();
 	while(enumeration.hasMoreElements()){
