@@ -7,23 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<%! 
-		String id,pw;
-	%>	
 	
 	<%
-	id = request.getParameter("id");
-	pw = request.getParameter("pw");
+	Cookie[] cookies = request.getCookies();
 	
-	if(id.equals("abcd")&&pw.equals("1234")){
-		Cookie cookie = new Cookie("id",id);
-		cookie.setMaxAge(60);
-		response.addCookie(cookie);
-		response.sendRedirect("welcome.jsp");
-	}else{
-		response.sendRedirect("login.jsp");
+	for(int i = 0; i<cookies.length; i++){
+		String id = cookies[i].getValue();
+		out.println(id+"´Ô ¾È³çÇÏ¼¼¿ä" +"<br/>");
 	}
 	%>
+	
+	<a href="logout.jsp">log out</a>
 </body>
 </html>
