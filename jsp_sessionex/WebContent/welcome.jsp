@@ -14,8 +14,7 @@
 	while(enumeration.hasMoreElements()){
 		String sName = enumeration.nextElement().toString();
 		String sValue = (String)session.getAttribute(sName);
-		
-		System.out.println(sName);
+
 		
 		if(sValue.equals("abcd")){
 		out.println(sValue +"¥‘ æ»≥Á«œººø‰"+ "<br/>");

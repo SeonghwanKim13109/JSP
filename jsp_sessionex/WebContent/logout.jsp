@@ -17,7 +17,7 @@
 		String sValue = session.getAttribute(sName).toString();
 		
 		if(sName.equals("abcd")&&sValue.equals("1234")){
-		session.invalidate();
+		session.removeAttribute(sName);
 		}
 		
 	}
