@@ -15,7 +15,7 @@
 		if(str.equals("cookieN")){
 			out.println("cookie["+i+"] name : " +cookie[i].getName() + "<br/>");
 			out.println("cookie["+i+"] value : " +cookie[i].getValue() + "<br/>");
-			out.println("-------------------------------------");
+			out.println("-------------------------------------<br/>");
 		}
 	}
 	%>
