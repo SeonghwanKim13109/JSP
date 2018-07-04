@@ -17,9 +17,7 @@
 	pw = request.getParameter("pw");
 	
 	if(id.equals("abcd")&&pw.equals("1234")){
-		Cookie cookie = new Cookie("id",id);
-		cookie.setMaxAge(60);
-		response.addCookie(cookie);
+		session.setAttribute("id", id);
 		response.sendRedirect("welcome.jsp");
 	}else{
 		response.sendRedirect("login.html");

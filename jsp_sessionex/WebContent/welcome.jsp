@@ -13,10 +13,12 @@
 	Enumeration enumeration = session.getAttributeNames();
 	while(enumeration.hasMoreElements()){
 		String sName = enumeration.nextElement().toString();
-		String sValue = session.getAttribute(sName).toString();
+		String sValue = (String)session.getAttribute(sName);
 		
-		if(sName.equals("abcd")&&sValue.equals("1234")){
-		out.println(sName +"¥‘ æ»≥Á«œººø‰ <br/>");
+		System.out.println(sName);
+		
+		if(sName.equals("abcd")){
+		out.println(sName +"¥‘ æ»≥Á«œººø‰"+ "<br/>");
 		}
 		
 	}
