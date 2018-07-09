@@ -62,32 +62,36 @@ public class JoinOk extends HttpServlet {
 		phone2 = request.getParameter("phone2");
 		phone3 = request.getParameter("phone3");
 		sex = request.getParameter("sex");
+		System.out.println(name);
+		if(name.equals("") || birth.equals("")||id.equals("")||pw.equals("")||phone2.equals("")||phone3.equals("")||sex.equals(""))
+			response.sendRedirect("join.html");
+		else {
+			String query = "insert into member values('" + name + "','" + birth + "','" + id + "','" + pw + "','"
+					+ phone1 + "','" + phone2 + "','" + phone3 + "','" + sex + "')";
 
-		String query = "insert into member values('" + name + "','" + birth + "','" + id + "','" + pw + "','" + phone1 + "','"
-				+ phone2 + "','" + phone3 + "','" + sex + "')";
-
-		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "scott", "tiger");
-			statement = connection.createStatement();
-			int i = statement.executeUpdate(query);
-			if (i == 1) {
-				System.out.println("insert success");
-				response.sendRedirect("joinResult.jsp");
-			} else {
-				System.out.println("insert fail");
-				response.sendRedirect("join.html");
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
 			try {
-				if (statement != null)
-					statement.close();
-				if (connection != null)
-					connection.close();
+				Class.forName("oracle.jdbc.driver.OracleDriver");
+				connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "scott", "tiger");
+				statement = connection.createStatement();
+				int i = statement.executeUpdate(query);
+				if (i == 1) {
+					System.out.println("insert success");
+					response.sendRedirect("joinResult.jsp");
+				} else {
+					System.out.println("insert fail");
+					response.sendRedirect("join.html");
+				}
 			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				try {
+					if (statement != null)
+						statement.close();
+					if (connection != null)
+						connection.close();
+				} catch (Exception e) {
 
+				}
 			}
 		}
 	}
