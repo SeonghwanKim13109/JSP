@@ -38,8 +38,8 @@ public class BFrontController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
+		actionDo(request, response);	
+		}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -61,7 +61,7 @@ public class BFrontController extends HttpServlet {
 		String com = uri.substring(conPath.length());
 		
 		if(com.equals("/write_view.do")) {
-			viewPage = "Write_view.jsp";
+			viewPage = "write_view.jsp";
 		}
 		
 		else if(com.equals("/write.do")) {
